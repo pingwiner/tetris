@@ -1,0 +1,57 @@
+#controls {
+    width: 160px;
+    text-align: center;
+}
+
+#controls button {
+    height: 30px;
+    width: 40px;
+    font-size: 12pt;    
+    text-align: center;
+}
+
+#ctr1 {
+    margin: 5px 0;
+}
+
+#ctr1 button {
+    display: inline-block;
+    margin: auto;
+}
+
+#main {
+    float: left;
+}
+
+#sidebar {
+    float: left;
+    width: 100px;
+    margin-left: 5px;
+}
+
+#score, #record {
+    font-size: 16pt;
+    margin-top: 8px;
+}
+
+.block {
+    padding: 9px 9px 11px 9px;
+    margin-top: 5px;    
+    text-align: center;    
+    border: 1px solid black;    
+}
+
+#score-block {    
+    margin-top: 0;   
+    padding-bottom: 10px;
+}
+
+#preview {
+    margin: auto;
+}
+
+#level {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 8px;
+}
