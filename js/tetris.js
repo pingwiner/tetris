@@ -5,7 +5,7 @@ var tetris = {
     STATE_FINISHED: 2,
     
     cellSize: 20,
-    stackWidth: 8,
+    stackWidth: 10,
     stackHeight: 17,
     tickTime: 1000,
     stack: null,

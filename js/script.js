@@ -4,6 +4,9 @@ var KEY_RIGHT = 39;
 var KEY_LEFT = 37;
 var KEY_SPACE = 32;
 
+var gestStartX = 0;
+var gestStartY = 0;
+
 function pauseClick() {
     switch(tetris.state) {
         case tetris.STATE_RUNNING: 
@@ -110,3 +113,40 @@ if (supportsLocalStorage()) {
 } else {
     document.getElementById('record-block').style.visibility = 'hidden';
 }
+
+document.ontoushctart = function(e) {
+    var touch = e.touches[0];
+    gestStartX = touch.pageX;
+    gestStartY = touch.pageY;
+};
+
+document.ontouchend = function(e) {
+    var touch = e.touches[0];
+    down(touch.pageX, touch.pageY);
+};
+
+
+document.onmousedown = function(e) {
+    gestStartX = e.pageX;
+    gestStartY = e.pageY;
+};
+
+function down(x, y) {
+    var xDiff = x - gestStartX;
+    var yDiff = y - gestStartY;
+    
+    gestStartX = 0;
+    gestStartY = 0;
+    
+    document.getElementById('cx').innerHTML = xDiff;
+    document.getElementById('cy').innerHTML = yDiff;    
+}
+
+
+
+document.onmouseup = function(e) {
+    var x = e.pageX;
+    var y = e.pageY;
+
+    down(x,y);
+};

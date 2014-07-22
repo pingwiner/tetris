@@ -2,40 +2,45 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width,
+            minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <div id="main">
-            <canvas id="stack"></canvas>
-            <div id="controls">
-                <div>
-                    <button id="rotate">↺</button>
+        <div id="wrapper">  
+            <div id="main">
+                <canvas id="stack"></canvas>
+                <div id="controls">
+                    <div>
+                        <button id="rotate">↺</button>
+                    </div>
+                    <div id="ctr1">
+                        <button id="left">&larr;</button>
+                        <button id="start">&#8214;</button>            
+                        <button id="right">&rarr;</button>            
+                    </div>    
+                    <div>
+                        <button id="down">&darr;</button>
+                    </div>    
                 </div>
-                <div id="ctr1">
-                    <button id="left">&larr;</button>
-                    <button id="start">&#8214;</button>            
-                    <button id="right">&rarr;</button>            
+            </div>
+            <div id="sidebar">
+                <div id="score-block" class="block">
+                    <div>Score</div>
+                    <div id="score"></div>
+                </div>
+                <div id="preview-block" class="block">
+                    <canvas id="preview"></canvas>                    
+                </div>
+                <div id="level-block" class="block">
+                    <div>Level</div>
+                    <div id="level"></div>
                 </div>    
-                <div>
-                    <button id="down">&darr;</button>
-                </div>    
-            </div>
-        </div>
-        <div id="sidebar">
-            <div id="score-block" class="block">
-                <div>Score</div>
-                <div id="score"></div>
-            </div>
-            <div id="preview-block" class="block">
-                <canvas id="preview"></canvas>                    
-            </div>
-            <div id="level-block" class="block">
-                <div>Level</div>
-                <div id="level"></div>
-            </div>    
-            <div id="record-block" class="block">
-                <div>Record</div>
-                <div id="record"></div>
+                <div id="record-block" class="block">
+                    <div>Record</div>
+                    <div id="record"></div>
+                </div>
             </div>
         </div>
         <script src="js/tetris.js"></script>
